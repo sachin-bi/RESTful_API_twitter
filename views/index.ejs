@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=LLLL, initial-scale=1.0">
+    <title>Home pg</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <h1>Welcome to Twitter</h1>
+    <br>
+    <a href="http://localhost:8080/posts/new">Lets Twit..</a>
+    <br>
+
+
+
+
+    <% for( let i=0; i < dataHub.length; i++ ) { %>
+        <p>
+        <div class="card">
+
+            <h3>@<%=dataHub[i].user%>
+
+            </h3>
+            <p>
+                <%=dataHub[i].content%>
+            </p>
+            <a href="http://localhost:8080/posts/<%= dataHub[i].id %>">See in detail</a>
+            &nbsp;&nbsp;&nbsp;
+
+            <a href="http://localhost:8080/posts/<%=dataHub[i].id%>/edit">Edit</a>
+            &nbsp;&nbsp;&nbsp;
+
+            <form action="/posts/<%=dataHub[i].id%>?_method=DELETE" method="post">
+                &nbsp;&nbsp;&nbsp;<button>
+                    Delete
+                </button>
+            </form>
+
+
+        </div><br>
+        </p>
+        <% } %>
+
+
+</body>
+
+</html>

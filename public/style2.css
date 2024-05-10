@@ -1,0 +1,11 @@
+body{
+    background-color: lightseagreen;
+}
+
+.card{
+    /* background-color: lightseagreen; */
+    background-color: aquamarine;
+
+    padding: 10px 15px;
+    border-radius: 4%;
+}

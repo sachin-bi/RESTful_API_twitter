@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Twit</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+    <h1>Edit Twit</h1>
+    <br />
+    <p>Username: @<%= post.user %>
+    </p>
+    <form action="/posts/<%= post.id %>?_method=PATCH" method="POST">
+
+        <label for="content">Content</label><br />
+        <textarea name="content" placeholder="<%= post.content %>" rows="7" cols="30"><%= post.content %>
+        </textarea>
+
+        <br />
+        <br />
+        <button>Save Edit</button>
+    </form>
+</body>
+
+</html>
